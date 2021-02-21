@@ -23,10 +23,6 @@ class Solution {
             return head;
         }
 
-        if (head.next == null && n == 1) {
-            return null;
-        }
-
         ListNode first = head;
         ListNode second = head;
         while (n > 0) {
