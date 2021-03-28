@@ -1,6 +1,3 @@
-import java.util.List;
-import java.util.Stack;
-
 /*
  * @lc app=leetcode.cn id=22 lang=java
  *
@@ -31,10 +28,10 @@ class Solution {
 
     public void backendMethod(List<String> ans, String str, int x, int n) {
         Stack<Character> stack = new Stack<Character>();
-        if (!isValidStr(stack, str) || x > 2 * n) {
+        if (x > 2 * n || !isValidStr(stack, str)) {
             return;
         }
-        if (stack.isEmpty() && x == 2 * n) {
+        if (x == 2 * n && stack.isEmpty()) {
             ans.add(str);
             return;
         }
